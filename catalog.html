@@ -13,23 +13,27 @@
         <ul>
           <li><a href="#">Студия</a></li>
           <li><a href="catalog.html">Клиенты</a></li>
-          <li><a href="#">Магазин</a></li>
+          <li><a>Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul> 
         <a href="#">Корзина</a>
       </nav>
     </header>
+
     <main>
       <h1> Магазин готовых шаблонов</h1>
       <section>
         <h2>Фильтр готовых шаблонов</h2>
-        <form action="https://echo.htmlacademy.ru" method="get">
-          
+        <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
             <legend>Стоимость:</legend>
-            <input type="range" min="0" max="200000" step="1000" value="2000">
-            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-            <label class="max-price">до <input type="text" name="max-price" value="300000"></label>
+            <input type="range" name="scale" min="0" max="200000" step="1000" value="`150000">
+            <label class="min-price">от 
+              <input type="text" name="scale" value="0">
+            </label>
+            <label class="max-price">до 
+              <input type="text" name="scale" value="300000">
+            </label>
           </fieldset>
           <fieldset>
             <legend>Сетка:</legend>
@@ -76,14 +80,75 @@
           <button type="submit">Показать</button>
         </form>
       </section>      
+
+      <section>
+        <h2>Сортировать:</h2>
+        <ul>
+          <li><a href="#">По цене</a></li>
+          <li><a href="#">По типу</a></li>
+          <li><a href="#">По названию</a></li>
+          <li><img src="img/icon-down-dir.png" alt="Сортировка вниз"></li>
+          <li><img src="img/icon-down-dir.png" alt="Сортировка вверх"></li>
+        </ul>
+      </section>
+
+      <section>
+        <ul>
+          <li>
+            <img src="img/cards/img-sedona 1.png" alt="макет проекта Седона">
+            <a href="#"><h3>Sedona</h3></a>
+            <p>Информационный сайт для туристов</p>
+            <a href="#">9 900 ₽</a>
+          </li>
+          <li>
+            <img src="img/cards/img-pink 1.png" alt="макет проекта Пинк">
+            <a href="#"><h3>Pink App</h3></a>
+            <p>Продуктовый лендингприложения для iOS и Android</p>
+            <a href="#">9 900 ₽</a>
+          </li>
+          <li>
+            <img src="img/cards/img-barbershop 1.png" alt="макет проекта Барбершоп">
+            <a href="#"><h3>Barbershop</h3></a>
+            <p>Сайт салона красоты.Для мужчин, да.</p>
+            <a href="#">9 900 ₽</a>
+          </li>
+          <li>
+            <img src="img/cards/img-mishka 1.png" alt="макет проекта Мишка">
+            <a href="#"><h3>Mishka</h3></a>
+            <p>Интернет-магазин вязаных игрушек</p>
+            <a href="#">9 900 ₽</a>
+          </li>
+          <li>
+            <img src="img/cards/img-aplus 1.png" alt="макет проекта A плюс">
+            <a href="#"><h3>A plus</h3></a>
+            <p>Лендинг курсов повышения квалификации</p>
+            <a href="#">9 900 ₽</a>
+          </li>
+          <li>
+            <img src="img/cards/img-kvast 1.png" alt="макет проекта Кваст">
+            <a href="#"><h3>Kvast</h3></a>
+            <p>Промо-сайт производителякрафтового кваса</p>
+            <a href="#">9 900 ₽</a>
+          </li>
+        </ul>
+        <ol>
+          <li><a>1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">Следующая</a></li>
+
+        </ol>
+      </section>
     </main>
+
     <footer>
       <section>
         <p>NЁRDS DESIGN STUDIO</p>
         <p>наб. Реки Карповки, 5 лит П, Санкт-Петербург</p>
-        <a href="tel:+7800555-86-28"></a>
-        <button type="button">НАПИШИТЕ НАМ</button>
+        <a href="tel:+78005558628">+7 800 555-86-28</a>
+        <button type="button">Напишите нам</button>
       </section>
+
       <section>
         <h2>Напишите нам</h2>
         <form action="https://echo.htmlacademy.ru" method="POST">
@@ -102,6 +167,7 @@
           <button type="submit">Отправить</button>
         </form>
       </section>
+
       <section>
           <ul>
             <li><a href="#"><img src="img/socials/vk-icon.png" alt="Иконка ВКонтакте"></a></li>
