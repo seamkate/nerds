@@ -13,7 +13,7 @@
     <header class="main-header">
 
       <nav class="main-navigation wrapper">
-        <a class="main-header-logo" href="index.html">
+        <a class="main-header-logo" href="index.html" aria-label="На главную">
           <img src="img/logo_nerds/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
         </a>
         <ul class="site-navigation">
@@ -48,7 +48,7 @@
 
         <section class="main-filter">
 
-          <h2 class="hidden">Фильтр готовых шаблонов</h2>
+          <h2 class="visually-hidden">Фильтр готовых шаблонов</h2>
 
           <form method="get" action="https://echo.htmlacademy.ru" class="filter-list">
 
@@ -59,8 +59,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                  <div class="toggle toggle-min" aria-label="минимальная стоимость" tabindex="0"></div>
+                  <div class="toggle toggle-max" aria-label="максимальная стоимость" tabindex="0"></div>
                 </div>
                 <div class="price-controls">
                   <label for="min-price" class="min-price">
@@ -78,17 +78,17 @@
               <legend class="filter-item-header">Сетка:</legend>
               <ul>
                 <li class="filter-option filter-radio">
-                  <input class="hidden filter-input-radio" type="radio" name="grid" id="adaptive" checked >
+                  <input class="visually-hidden filter-input-radio" type="radio" name="grid" id="adaptive" checked >
                   <label for="adaptive"> Адаптивная</label>
                 </li>
 
                 <li class="filter-option filter-radio">
-                  <input class="hidden filter-input-radio" type="radio" name="grid" id="fixed">
+                  <input class="visually-hidden filter-input-radio" type="radio" name="grid" id="fixed">
                   <label for="fixed"> Фиксированная</label>
                 </li>
 
                 <li class="filter-option filter-radio">
-                  <input class="hidden filter-input-radio" type="radio" name="grid" id="rubber">
+                  <input class="visually-hidden filter-input-radio" type="radio" name="grid" id="rubber">
                   <label for="rubber"> Резиновая</label>
                 </li>
               </ul>
@@ -99,27 +99,27 @@
               <legend class="filter-item-header">Особенности:</legend>
               <ul>
                 <li class="filter-option filter-checkbox">
-                  <input class="hidden filter-input-checkbox" type="checkbox" name="features" id="slider" checked>
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features" id="slider" checked>
                   <label for="slider">Слайдер</label>
                 </li>
 
                 <li class="filter-option filter-checkbox">
-                  <input class="hidden filter-input-checkbox" type="checkbox" name="features" id="block">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features" id="block">
                   <label for="block">Блок преимуществ</label>
                 </li>
 
                 <li class="filter-option filter-checkbox">
-                  <input class="hidden filter-input-checkbox" type="checkbox" name="features" id="news" checked>
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features" id="news" checked>
                   <label for="news">Новости</label>
                 </li>
 
                 <li class="filter-option filter-checkbox">
-                  <input class="hidden filter-input-checkbox" type="checkbox" name="features" id="gallery">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features" id="gallery">
                   <label for="gallery">Галерея</label>
                 </li>
 
                 <li class="filter-option filter-checkbox">
-                  <input class="hidden filter-input-checkbox" type="checkbox" name="features" id="shopping-card">
+                  <input class="visually-hidden filter-input-checkbox" type="checkbox" name="features" id="shopping-card">
                   <label for="shopping-card">Корзина</label>
                 </li>
               </ul>
@@ -137,21 +137,23 @@
 
           <ul class="sorting-list">
             <li class="sorting-item active-sorting-item">
-              <a href="#">По цене</a>
+              <button type="button" aria-label="Cортировать по цене">По цене</button>
             </li>
 
             <li class="sorting-item ">
-              <a href="#">По типу</a>
+              <button type="button" aria-label="Cортировать по типу">По типу</button>
             </li>
             <li class="sorting-item">
-              <a href="#">По названию</a>
+              <button type="button" aria-label="Cортировать по названию">По названию</button>
             </li>
           </ul>
 
           <ul class="sorting-direction">
             <li class="sorting-direction-item active-sorting-item">
+              <button type="button" aria-label="Cортировать по убыванию"></button>
             </li>
             <li class="sorting-direction-item">
+              <button type="button" aria-label="Cортировать по возрастанию"></button>
             </li>
 
           </ul>
@@ -165,7 +167,9 @@
               <div class="catalog-item-description">
                 <a href="#" class="product-name">Sedona</a>
                 <p class="product-desc">Информационный сайт <br> для туристов</p>
-                <a href="#" class="button catalog-item-button"> 9 900 Р</a>
+                <button type="button" class="button catalog-item-button" aria-label="Добавить проект Sedona в корзину за 9 тыс. 900 руб">
+                   9 900 Р
+                </button>
               </div>
               <img src="/nerds/img/cards/img-sedona.png" alt="макет проекта Sedona" width="358px" height="578px">
             </li>
@@ -175,7 +179,9 @@
               <div class="catalog-item-description">
                 <a href="#" class="product-name">Pink app</a>
                 <p class="product-desc">Продуктовый лендинг <br> приложения для iOS и Android</p>
-                <a href="#" class="button catalog-item-button">9 900 Р</a>
+                <button type="button" class="button catalog-item-button" aria-label="Добавить проект Пинк Эпп в корзину за 9 тыс. 900 руб">
+                  9 900 Р
+               </button>
               </div>
               <img src="/nerds/img/cards/img-pink.png" alt="Макет проекта Pink" width="358px" height="578px">
             </li>
@@ -184,7 +190,9 @@
               <div class="catalog-item-description">
                 <a href="#" class="product-name">Barbershop</a>
                 <p class="product-desc">Сайт салона красоты. <br> Для мужчин, да.</p>
-                <a href="#" class="button catalog-item-button">9 900 Р</a>
+                <button type="button" class="button catalog-item-button" aria-label="Добавить проект барбершопа Бородинский в корзину за 9 тыс. 900 руб">
+                  9 900 Р
+               </button>
               </div>
               <img src="/nerds/img/cards/img-barbershop.png" alt="Макет проекта Barbershop" width="358px" height="578px">
             </li>
@@ -193,7 +201,9 @@
               <div class="catalog-item-description">
                 <a href="#" class="product-name">Mishka</a>
                 <p class="product-desc">Интернет-магазин <br> вязаных игрушек</p>
-                <a href="#" class="button catalog-item-button">9 900 Р</a>
+                <button type="button" class="button catalog-item-button" aria-label="Добавить проект интернет-магазина Мишка в корзину за 9 тыс. 900 руб">
+                  9 900 Р
+               </button>
               </div>
               <img src="/nerds/img/cards/img-mishka.png" alt="Макет проекта Mishka" width="358px" height="578px">
             </li>
@@ -202,8 +212,9 @@
               <div class="catalog-item-description">
                 <a href="#" class="product-name"> A Plus</a>
                 <p class="product-desc">Лендинг курсов повышения <br> квалификации</p>
-                <a href="#" class="button catalog-item-button">9 900 Р</a>
-              </div>
+                <button type="button" class="button catalog-item-button" aria-label="Добавить проект А плюс в корзину за 9 тыс. 900 руб">
+                  9 900 Р
+               </button>
               <img src="/nerds/img/cards/img-aplus.png" alt="Макет проекта A Plus" width="358px" height="578px">
             </li>
 
@@ -211,7 +222,9 @@
               <div class="catalog-item-description">
                 <a href="#" class="product-name">Kvast</a>
                 <p class="product-desc">Промо-сайт производителя <br> крафтового кваса</p>
-                <a href="#" class="button catalog-item-button">9 900 Р</a>
+                <button type="button" class="button catalog-item-button" aria-label="Добавить проект промо-сайта в корзину за 9 тыс. 900 руб">
+                  9 900 Р
+               </button>
               </div>
               <img src="/nerds/img/cards/img-kvast.png" alt="Макет проекта Kvast" width="358px" height="578px">
             </li>
@@ -219,19 +232,19 @@
 
           <ul class="pagination">
             <li>
-              <a class="button-pagination active-button-pagination">1</a>
+              <a class="button-pagination active-button-pagination" aria-label="Первая страница каталога">1</a>
             </li>
 
             <li>
-              <a class="button-pagination" href="#">2</a>
+              <a class="button-pagination" href="#" aria-label="Вторая страница каталога">2</a>
             </li>
 
             <li>
-              <a class="button-pagination" href="#">3</a>
+              <a class="button-pagination" href="#" aria-label="Третья страница каталога">3</a>
             </li>
 
             <li>
-              <a class="button-pagination next-page" href="#">Следующая</a>
+              <a class="button-pagination next-page" aria-label="Следующая страница каталога" href="#">Следующая</a>
             </li>
           </ul>
 
@@ -254,13 +267,10 @@
               <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
             </p>
 
-            <button class="button" type="button">Напишите нам</button>
-          </section>
-          <!-- <div class=" contacts-area"> -->
-
-
-
-        <!-- </div> -->
+            <button class="button" type="button" aria-label="Напишите нам">
+              Напишите нам
+            </button>
+        </section>
 
       </section>
 
@@ -268,19 +278,19 @@
 
         <ul class="social-list">
           <li class="social-item">
-            <a href="#" class="social-button">
+            <a href="#" class="social-button" aria-label="Следуй за нами во Вконтакте">
               <img src="img/socials/vk-icon.svg" width="26" height="15" alt="Иконка ВКонтакте">
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-button">
+            <a href="#" class="social-button" aria-label="Следуй за нами в Фейсбук">
               <img src="img/socials/fb-icon.svg" width="12" height="22"  alt="Иконка Фейсбук">
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-button">
+            <a href="#" class="social-button" aria-label="Следуй за нами в Инстаграм">
               <img src="img/socials/insta-icon.svg" width="21" height="21" alt="Иконка Инстаграм">
             </a>
           </li>
@@ -302,7 +312,7 @@
       <form class="appointment-form" action="https://echo.htmlacademy.ru" method="POST">
         <p class="appointment-form__place">
           <label for="appointment-name">Ваше имя:</label>
-          <input id="appointment-name" type="text" name="Ваше имя:" placeholder="Имя Фамилия">
+          <input id="appointment-name" type="text" name="Ваше имя:" placeholder="Имя Фамилия" autofocus="on">
         </p>
 
         <p  class="appointment-form__place">
@@ -315,7 +325,7 @@
           <input id="appointment-letter" type="text" name="Текст письма:" placeholder="В свободной форме">
         </p>
 
-        <button class="button appointment-button" type="submit">Отправить</button>
+        <button class="button appointment-button" aria-label="Отправить" type="submit">Отправить</button>
 
       </form>
 

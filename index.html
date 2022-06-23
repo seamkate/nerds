@@ -42,7 +42,7 @@
 
       <section class="slider ">
 
-        <h1 class="hidden"> Интернет-магазин Nerd`s</h1>
+        <h1 class="visually-visually-hidden"> Интернет-магазин Nerd`s</h1>
 
         <ul class="slider-list wrapper">
           <li class="slider-item  slider-item-phones current">
@@ -74,25 +74,25 @@
 
       <section class="service wrapper">
 
-        <h2 class="hidden">Услуги</h2>
+        <h2 class="visually-hidden">Услуги</h2>
 
         <ul class="service-list">
           <li class="service-item">
             <h3 class="service-item-header service-item-header-web ">Веб-сайты</h3>
             <p class="service-item-desc">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-            <a href="#" class="button service-button">Заказать</a>
+            <a href="#" class="button service-button" aria-label="Заказать разработку веб-сайта">Заказать</a>
           </li>
 
           <li class="service-item">
             <h3 class="service-item-header service-item-header-app">Приложения</h3>
             <p class="service-item-desc">Покорите топ-10 приложений <br> в AppStore и Google Play</p>
-            <a class="button service-app-button " href="#">Заказать</a>
+            <a class="button service-app-button" href="#" aria-label="Заказать разработку веб приложения">Заказать</a>
           </li>
 
           <li class="service-item">
             <h3 class="service-item-header service-item-header-presentation">Презентации</h3>
             <p class="service-item-desc">Вы даже не подозреваете, насколько вы изумительны!</p>
-            <a class="button service-presentation-button" href="#">Заказать</a>
+            <a class="button service-presentation-button" href="#" aria-label="Заказать разработку презентации" >Заказать</a>
           </li>
         </ul>
 
@@ -100,7 +100,7 @@
 
       <section class="about wrapper">
 
-        <h2 class="hidden" >О компании</h2>
+        <h2 class="visually-hidden" >О компании</h2>
 
           <div class="about-discussion">
             <p class="about-discussion-header">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
@@ -138,19 +138,27 @@
 
         <ol class="clients-list">
           <li class="clients-item">
-            <img class="clients-item-img" src="img/logo_clients/logo_htmlacademy.png" width="199" height="57" alt="Логотип html академии">
+            <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" rel="noopener noreferrer" aria-label="перейти на сайт html академии">
+              <img class="clients-item-img" src="img/logo_clients/logo_htmlacademy.png" width="199" height="57" alt="Логотип html академии">
+            </a>
           </li>
 
           <li class="clients-item">
-            <img class="clients-item-img" src="img/logo_clients/logo_borodinski.png" width="209" height="90" alt="Логотип Барбершопа Бородинский">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="перейти на сайт Барбершопа Бородинский">
+              <img class="clients-item-img" src="img/logo_clients/logo_borodinski.png" width="209" height="90" alt="Логотип Барбершопа Бородинский">
+            </a>
           </li>
 
           <li class="clients-item">
-            <img class="clients-item-img" src="img/logo_clients/logo_pink.png" width="185" height="52" alt=" Логотип Пинк">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="перейти на сайт продуктового лэндинга Пинк">
+              <img class="clients-item-img" src="img/logo_clients/logo_pink.png" width="185" height="52" alt=" Логотип Пинк">
+            </a>
           </li>
 
           <li class="clients-item">
-            <img class="clients-item-img" src="img/logo_clients/logo_mishka.png" width="173" height="84" alt=" Логотип Мишка">
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="перейти на сайт интернет-магазина вязаных игрушек Мишка">
+              <img class="clients-item-img" src="img/logo_clients/logo_mishka.png" width="173" height="84" alt=" Логотип Мишка">
+            </a>
           </li>
         </ol>
 
@@ -170,13 +178,10 @@
               <a class="contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
             </p>
 
-            <button class="button" type="button">Напишите нам</button>
-          </section>
-          <!-- <div class=" contacts-area"> -->
-
-
-
-        <!-- </div> -->
+            <button class="button" type="button" aria-label="Напишите нам">
+              Напишите нам
+            </button>
+        </section>
 
       </section>
 
@@ -184,19 +189,19 @@
 
         <ul class="social-list">
           <li class="social-item">
-            <a href="#" class="social-button">
+            <a href="#" class="social-button" aria-label="Следуй за нами во Вконтакте">
               <img src="img/socials/vk-icon.svg" width="26" height="15" alt="Иконка ВКонтакте">
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-button">
+            <a href="#" class="social-button" aria-label="Следуй за нами в Фейсбук">
               <img src="img/socials/fb-icon.svg" width="12" height="22"  alt="Иконка Фейсбук">
             </a>
           </li>
 
           <li class="social-item">
-            <a href="#" class="social-button">
+            <a href="#" class="social-button" aria-label="Следуй за нами в Инстаграм">
               <img src="img/socials/insta-icon.svg" width="21" height="21" alt="Иконка Инстаграм">
             </a>
           </li>
@@ -218,7 +223,7 @@
       <form class="appointment-form" action="https://echo.htmlacademy.ru" method="POST">
         <p class="appointment-form__place">
           <label for="appointment-name">Ваше имя:</label>
-          <input id="appointment-name" type="text" name="Ваше имя:" placeholder="Имя Фамилия">
+          <input id="appointment-name" type="text" name="Ваше имя:" placeholder="Имя Фамилия" autofocus="on">
         </p>
 
         <p  class="appointment-form__place">
@@ -231,7 +236,7 @@
           <input id="appointment-letter" type="text" name="Текст письма:" placeholder="В свободной форме">
         </p>
 
-        <button class="button appointment-button" type="submit">Отправить</button>
+        <button class="button appointment-button" aria-label="Отправить" type="submit">Отправить</button>
 
       </form>
 

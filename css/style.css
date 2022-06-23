@@ -91,12 +91,18 @@ img {
   box-sizing: border-box;
 }
 
-.hidden {
-  display: none;
-  width: 0px;
-  height: 0px;
-  box-sizing: border-box;
-  margin: 0;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* HEADER */
@@ -1238,7 +1244,16 @@ img {
   margin-right: 47px;
 }
 
-.sorting-item a {
+.sorting-item button,
+.sorting-direction-item button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+
+.sorting-item button {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -1247,17 +1262,14 @@ img {
   opacity: 0.3;
 }
 
-.sorting-item:hover a,
+.sorting-item:hover button,
 .sorting-direction-item:hover{
   opacity: 0.6;
 }
 
 .sorting-direction-item {
-  display: block;
   width: 11px;
   height: 10px;
-  background-color:var(--bacic-white);
-  border: none;
   background-image: url(/nerds/img/icon-down.svg);
   background-repeat:no-repeat;
   background-position: center;
@@ -1273,8 +1285,8 @@ img {
 }
 
 .active-sorting-item,
-.active-sorting-item a,
-.sorting-item:active a,
+.active-sorting-item button,
+.sorting-item:active button,
 .sorting-direction-item:active {
   opacity: 1;
 }
