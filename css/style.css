@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: 'Roboto';
   src: url('/nerds/fonts/robotobold.woff2') format('woff2'),
@@ -161,7 +168,6 @@ img {
   opacity: 0.3;
 }
 
-
 .header-link:hover {
   color:var(--basic-red)
 }
@@ -222,7 +228,6 @@ img {
 
 .slider-item{
   display: none;
-  /* position: relative; */
   max-width: 1160px;
   margin: 0 auto;
 }
@@ -609,8 +614,8 @@ img {
   align-self: center;
   width: 288px;
   height: 180px;
-   -o-object-fit: none;
-      object-fit: none;
+  -o-object-fit: none;
+     object-fit: none;
   -o-object-position:  center center;
      object-position:  center center;
 }
@@ -783,24 +788,35 @@ img {
 
 .appointment{
   display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+
   box-sizing:border-box;
+
   width: 960px;
   height: 590px;
   background-color:var(--bacic-white);
   box-shadow: 0px 20px 40px var(--shadow-for-appointment);
+
   padding-left: 100px;
   padding-right: 90px;
   padding-top: 63px;
 }
 
-.pop-up{
+
+.popup{
   display: block;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-left: -480px;
-  transform: translateY(-50%);
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
 }
+
+.appointment-error {
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
+
 
 
 .appointment-header {
@@ -981,23 +997,23 @@ img {
 }
 
 .grid-container > *:nth-child(1){
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .grid-container > *:nth-child(2){
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  grid-row: 1;
+  grid-column: 3;
 }
 
 .grid-container > *:nth-child(3){
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  grid-row: 2;
+  grid-column: 1;
 }
 
 .grid-container > *:nth-child(4){
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
+  grid-row: 2;
+  grid-column: 3;
 }
 
 /* FILTER */
@@ -1450,4 +1466,105 @@ img {
   background:none;
   border: var(--border-grey-active) 3px solid;
   padding-top: 10px;
+}
+
+
+/* ANIMATION */
+
+
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(200%) ;
+  }
+
+  70% {
+    transform: translateX(-50%) translateY(-48%);
+  }
+
+  90% {
+    transform: translateX(-50%) translateY(-51px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(200%) ;
+  }
+
+  70% {
+    transform: translateX(-50%) translateY(-48%);
+  }
+
+  90% {
+    transform: translateX(-50%) translateY(-51px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-51%) translateY(-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-49%) translateY(-50%);
+  }
+}
+
+
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-51%) translateY(-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-49%) translateY(-50%);
+  }
+}
+.example {
+    display: -ms-grid;
+    display: grid;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: linear-gradient(to bottom, white, black);
 }
